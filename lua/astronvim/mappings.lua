@@ -457,4 +457,20 @@ maps.n["<leader>uw"] = { ui.toggle_wrap, desc = "Toggle wrap" }
 maps.n["<leader>uy"] = { ui.toggle_syntax, desc = "Toggle syntax highlighting (buffer)" }
 maps.n["<leader>uh"] = { ui.toggle_foldcolumn, desc = "Toggle foldcolumn" }
 
+
+-- -- --  Custom -- -- -- 
+-- harpoon/files
+local harpoon = require("harpoon")
+maps.n["<leader>a"] = {  desc = "Harpoon" }
+maps.n["<leader>ad"] = {  desc = "More options" }
+maps.n["<leader>add"] = { function() harpoon:list():append() end, desc = "Add the file to harpoon list" }
+maps.n["<C-e>"] = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end , desc = "Show harpoon menu" }
+maps.n["<leader>aj"] = { function() harpoon:list():select(1) end, desc=harpoon:list():get(1).value}
+maps.n["<leader>aa"] = { function() harpoon:list():select(2) end, desc=harpoon:list():get(2).value}
+maps.n["<leader>as"] = { function() harpoon:list():select(3) end, desc=harpoon:list():get(3).value}
+maps.n["<leader>ak"] = { function() harpoon:list():select(4) end, desc=harpoon:list():get(4).value}
+-- Toggle previous & next buffers stored within Harpoon list
+maps.n["<C-S-P>"]= {function() harpoon:list():prev() end , desc = "Previous buffer stored within Harpoon list"}
+maps.n["<C-S-N>"] = { function() harpoon:list():next() end , desc = "Next buffer stored within Harpoon list"}
+
 utils.set_mappings(astronvim.user_opts("mappings", maps))

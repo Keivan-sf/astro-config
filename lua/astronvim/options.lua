@@ -44,7 +44,8 @@ local options = astronvim.user_opts("options", {
         updatetime = 300, -- length of time to wait before triggering the plugin
         virtualedit = "block", -- allow going past end of line in visual block mode
         wrap = false, -- disable wrapping of lines longer than the width of window
-        writebackup = false -- disable making a backup before overwriting a file
+        writebackup = false, -- disable making a backup before overwriting a file
+        scrolloff = 10
     },
     g = {
         mapleader = " ", -- set leader key
@@ -70,4 +71,3 @@ local options = astronvim.user_opts("options", {
 for scope, table in pairs(options) do
     for setting, value in pairs(table) do vim[scope][setting] = value end
 end
-
