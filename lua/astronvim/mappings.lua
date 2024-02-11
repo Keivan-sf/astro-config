@@ -462,13 +462,12 @@ maps.n["<leader>uh"] = { ui.toggle_foldcolumn, desc = "Toggle foldcolumn" }
 -- harpoon/files
 local harpoon = require("harpoon")
 maps.n["<leader>a"] = {  desc = "Harpoon" }
-maps.n["<leader>ad"] = {  desc = "More options" }
-maps.n["<leader>add"] = { function() harpoon:list():append() end, desc = "Add the file to harpoon list" }
+maps.n["<leader>ad"] = { function() harpoon:list():append() end, desc = "Add the file to harpoon list" }
 maps.n["<C-e>"] = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end , desc = "Show harpoon menu" }
-maps.n["<leader>aj"] = { function() harpoon:list():select(1) end, desc=harpoon:list():get(1) and harpoon:list():get(1).value or '_'}
-maps.n["<leader>aa"] = { function() harpoon:list():select(2) end, desc=harpoon:list():get(2) and harpoon:list():get(2).value or '_'}
-maps.n["<leader>as"] = { function() harpoon:list():select(3) end, desc=harpoon:list():get(3) and harpoon:list():get(3).value or '_'}
-maps.n["<leader>ak"] = { function() harpoon:list():select(4) end, desc=harpoon:list():get(4) and harpoon:list():get(4).value or '_'}
+maps.n["<leader>aj"] = { function() harpoon:list():select(1) end, desc= "#1"}
+maps.n["<leader>aa"] = { function() harpoon:list():select(2) end, desc= "#2"}
+maps.n["<leader>as"] = { function() harpoon:list():select(3) end, desc= "#3"}
+maps.n["<leader>ak"] = { function() harpoon:list():select(4) end, desc= "#4"}
 -- Toggle previous & next buffers stored within Harpoon list
 maps.n["<C-S-P>"]= {function() harpoon:list():prev() end , desc = "Previous buffer stored within Harpoon list"}
 maps.n["<C-S-N>"] = { function() harpoon:list():next() end , desc = "Next buffer stored within Harpoon list"}
