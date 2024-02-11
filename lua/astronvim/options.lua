@@ -46,7 +46,7 @@ local options = astronvim.user_opts("options", {
         wrap = false, -- disable wrapping of lines longer than the width of window
         writebackup = false, -- disable making a backup before overwriting a file
         scrolloff = 10,
-        spell = true
+        spell = true,
     },
     g = {
         mapleader = " ", -- set leader key
