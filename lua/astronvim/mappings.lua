@@ -471,5 +471,6 @@ maps.n["<leader>ak"] = { function() harpoon:list():select(4) end, desc= "#4"}
 -- Toggle previous & next buffers stored within Harpoon list
 maps.n["<C-S-P>"]= {function() harpoon:list():prev() end , desc = "Previous buffer stored within Harpoon list"}
 maps.n["<C-S-N>"] = { function() harpoon:list():next() end , desc = "Next buffer stored within Harpoon list"}
+maps.n["<leader>pp"] = {"\"+p"}
 
 utils.set_mappings(astronvim.user_opts("mappings", maps))
