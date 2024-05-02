@@ -1,5 +1,8 @@
 -- keep the clipboard after pasting over something
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+vim.keymap.set({"n", "v", "x"}, "<C-S-I>", "\"+p")
+-- vim.keymap.set("x", "<C-S-I>", "\"+p")
 -- copy to clipboard
 vim.keymap.set({"n", "v"}, "y", "y")
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
