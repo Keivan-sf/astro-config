@@ -42,7 +42,7 @@ function M.init()
   if M.did_init then return end
   M.did_init = true
 
-  require("astronvim.lazy_notify").setup()
+  require("astronvim.notify").lazy_notify()
 
   -- force setup during initialization
   local plugin = require("lazy.core.config").spec.plugins.AstroNvim
